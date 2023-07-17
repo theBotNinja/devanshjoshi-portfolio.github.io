@@ -1,0 +1,294 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+body{
+    background-color: black;
+}
+#content{
+    scroll-behavior: smooth;
+}
+#titlename{
+    display: inline;
+    color: aliceblue;
+    font-family: "Courier New","monospace";
+    font-size: 2.5rem;
+    margin-left: 1rem;
+
+    text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557,
+    #44107a,
+    #44107a,
+    #00d9ff,
+    #00ff91
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear;
+  transition: all 2s;
+}
+#titlename:hover{
+    background-position: 200% center;
+}
+.navClass{
+    width: 100rem;
+    height: 3rem;
+    background-color:rgb(24, 24, 24);
+    filter:opacity(0.9);
+}
+.commonInSection{
+    width: 100rem;
+    height: 52rem;
+    opacity: 15%; 
+    filter: blur(5px);
+    transition: all 0.5s;
+}
+#Section1{
+    background-image: url(./res/bg.png);
+    background-repeat: no-repeat; 
+    background-size:cover;
+    overflow: hidden;
+}#welcome{
+    overflow: hidden;
+    text-shadow: 12px 12px 20px black;
+    position:absolute;
+    font-family: cursive;
+    height: 100%;
+    z-index: 1;
+    left: 14%;
+    opacity: 60%;
+    top:28%;
+    color: #000000;
+    font-size: 15rem;
+    animation: comeup 1s ease forwards;
+}#fgimg{
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    overflow-y: hidden;
+    transition: all 1s;
+    animation: comeup2 2s ease forwards;
+    filter: blur(5px);
+}
+#Section2{
+    background-image: url(./res/bg47.jpg);
+    background-repeat: no-repeat; 
+    background-size:cover;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#Section3{
+    display: flex;
+    color: #fff;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    gap: 1em;
+}
+#Section3 > #section3bg{
+    position: absolute;
+    filter: blur(5px);
+    left: 0;
+    top: 0;
+    background-image: url(./res/anime-fon-8767.jpeg);
+    background-repeat: no-repeat; 
+    background-size:cover;
+}
+.hide{
+    transform: translateY(100px);
+}.hide2{
+    transform: translateY(300px);
+}
+
+@keyframes textclip {
+    to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes comeup {
+    to{
+        transform: translateY(-175px);
+    }
+}@keyframes comeup2 {
+    to{
+        filter: blur(0);
+    }
+}
+
+#basicinfo{
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    width: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 1s;
+}#myimg{
+    width: 17%;
+    border-radius: 15%;
+    border: 1px ridge whitesmoke;
+    padding: 1em;
+}.info{
+    display: inline;
+    color: white;
+    font-size: x-large;
+    font-family: monospace;
+}.info2{
+    display: inline;
+    color: white;
+    font-size: x-large;
+    font-family: monospace;
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+}
+.infotran{
+    opacity: 1;
+    filter: blur(0);
+}
+.infoHighlight{
+    display: inline;
+    font-family: monospace;
+}
+.infoClass{
+    opacity: 0;
+}
+.displaySection{
+    opacity: 100;
+    filter: blur(0);
+}
+.section3bgshow{
+    opacity: 50%;
+    filter: blur(0);
+}
+.red{
+    color: #ff1361;
+}
+.yellow{
+    color: #fff800;
+}
+.dimWhite{
+    color: rgb(205, 205, 205);
+}
+.large{
+    font-size: xx-large;
+}
+.larger{
+    font-size: xxx-large;
+}
+#Section4{
+    width: 100rem;
+    height: 52rem;
+    transition: all 0.5s;
+    background-image: url(./res/artistic-minimalism-simple-1335898.jpeg);
+    background-repeat: no-repeat; 
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+#Section4>h1{
+    opacity: 80%;
+    font-size: 10em;
+    transition: all 1s;
+}
+#Section4>h1:hover{
+    opacity: 100%;
+    transform: translateY(-15px);
+    font-size: 10em;
+}
+#Section4>div.outter{
+    height: 30em;
+    width: 55em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#Section5{
+    width: 100rem;
+    height: 52rem;
+    opacity: 15%; 
+    filter: blur(5px);
+    transition: all 0.5s;
+}
+.card{
+    width: 20%;
+    height: 40%;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid transparent;
+    transition: all 1s;
+  }
+.card > img{
+    position:absolute;
+    left: 50;
+    top:50;
+    transition: all 0.5s;
+    width: 100px;
+}
+.card:hover > img{
+    opacity: 0;
+    transform: translateY(-100px);
+}
+.card:hover{
+    border: 1px solid whitesmoke;
+}
+.card >h2{
+    opacity: 0;
+    color: white;
+    font-size: x-large;
+    font-family: monospace;
+    filter: blur(5px);
+    opacity: 0;
+    padding: 7px;
+    transition: all 0.5s;
+}
+.card>p{
+    padding: 7px;
+    opacity: 0;
+    color: white;
+    font-size: large;
+    font-family: monospace;
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.card:hover>h2{
+    opacity: 100;
+    filter: blur(0);
+}
+.card:hover>p{
+    opacity: 100;
+    filter: blur(0);
+}
