@@ -13,8 +13,8 @@ body{
     display: inline;
     color: aliceblue;
     font-family: "Courier New","monospace";
-    font-size: 2.5rem;
-    margin-left: 1rem;
+    font-size: 2.5em;
+    margin-left: 0.29em;
 
     text-transform: uppercase;
   background-image: linear-gradient(
@@ -34,23 +34,24 @@ body{
   -webkit-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear;
-  transition: all 2s;
+  transition: background-position 2s;
 }
 #titlename:hover{
     background-position: 200% center;
 }
 .navClass{
-    width: 100rem;
-    height: 3rem;
+    width: 100vw;
+    height: 5vh;
     background-color:rgb(24, 24, 24);
     filter:opacity(0.9);
 }
 .commonInSection{
-    width: 100rem;
-    height: 52rem;
+    width: 100vw;
+    height: 110vh;
     opacity: 15%; 
     filter: blur(5px);
     transition: all 0.5s;
+    background-position: center;
 }
 #Section1{
     background-image: url(./res/bg.png);
@@ -62,13 +63,13 @@ body{
     text-shadow: 12px 12px 20px black;
     position:absolute;
     font-family: cursive;
-    height: 100%;
+    height: 100vh;
     z-index: 1;
     left: 14%;
     opacity: 60%;
     top:28%;
     color: #000000;
-    font-size: 15rem;
+    font-size: 15vw;
     animation: comeup 1s ease forwards;
 }#fgimg{
     overflow: hidden;
@@ -76,7 +77,7 @@ body{
     z-index: 2;
     left: 0;
     top: 10%;
-    width: 100%;
+    width: 100vw;
     overflow-y: hidden;
     transition: all 1s;
     animation: comeup2 2s ease forwards;
@@ -197,12 +198,13 @@ body{
     font-size: xxx-large;
 }
 #Section4{
-    width: 100rem;
-    height: 52rem;
+    width: 100vw;
+    height: 110vh;
     transition: all 0.5s;
     background-image: url(./res/artistic-minimalism-simple-1335898.jpeg);
     background-repeat: no-repeat; 
     background-size:cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
