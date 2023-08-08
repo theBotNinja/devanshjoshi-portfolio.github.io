@@ -121,7 +121,7 @@ body{
     overflow: hidden;
     text-shadow: 12px 12px 20px black;
     position:absolute;
-    font-family: cursive;
+    font-family: cursive,monospace;
     height: 100vh;
     z-index: 1;
     left: 14%;
@@ -287,7 +287,6 @@ body{
 #Section4>h1:hover{
     opacity: 80%;
     transform: translateY(-15px);
-    font-size: 10em;
 }
 #Section4>div.outter{
     width: 70vw;
