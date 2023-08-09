@@ -29,6 +29,10 @@ body{
         width: 20vw;
         height: 40vh;
     }
+    .newcard{
+        width: 20vw;
+        height: 40vh;
+    }
     #Section4> div > a > img {
         width: 10vh;
     }
@@ -54,6 +58,10 @@ body{
         width: 40ch;
     }
     .card{
+        width: 40vw;
+        height: 30vh;
+    }
+    .newcard{
         width: 40vw;
         height: 30vh;
     }
@@ -305,10 +313,6 @@ body{
     transform: translateY(-1em);
 }
 
-#Section5{
-    width: 100rem;
-    height: 52rem;
-}
 .newSection5{
     color: #e3fbff;
 }
@@ -386,4 +390,114 @@ body{
 .card:hover>p{
     opacity: 100;
     filter: blur(0);
+}
+
+#Section5{
+    width: 100vw;
+    display: flex;
+    color: #fff;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    gap: 1em;
+}
+
+.newcard {
+    border: .05rem solid black;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: border 0.5s;
+  }
+.newcard:hover{
+    border-color: white;
+}
+.newcard:hover .topImg {
+      animation: newimg 0.1s .7s forwards;
+    transform: scale(1.5, 1.2) translate(5px, -30px) rotate(5deg);
+  }
+  @keyframes newimg {
+      from{
+          background-image: url(./res/codeimg.png);
+      }to{
+          background-image: url(./res/codeimg.png);
+      }
+  }
+  .newcard:hover .topImg::before {
+    transition: transform 1s 0.4s;
+    transform: translateX(400px) skewX(-10deg);
+  }
+  
+  .newcard:hover .bottomImg {
+    transform: translateY(120%);
+  }
+  
+  .newcard .defImg {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgb(65, 122, 255), rgb(23, 65, 193));
+    background-size: 100% 200%;
+    transition: 0.3s all;
+  }
+  
+  .newcard .topImg {
+    top: 0;
+    right: 0;
+    position: relative;
+  }
+  
+  .newcard .topImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+    height: 100%;
+    width: 10px;
+    transform: skewX(-10deg);
+    background-image: linear-gradient(to right, rgb(32, 151, 248), rgba(255, 255, 255, 0.9));
+  }
+  
+  .newcard .bottomImg {
+    bottom: 0;
+    right: 0;
+    background-position: bottom center;
+  }
+  
+  .newcard__content {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    transform: translateX(-130%);
+    transition: .5s ease-in-out transform .3s;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .newcard__content span {
+    display: block;
+  }
+  
+  .newcard__content .name {
+    font-weight: bold;
+    font-size: 1.7rem;
+  }
+  
+  .newcard__content .job {
+    color: #B2B2B2;
+  }
+  
+  .newcard:hover .newcard__content {
+    transform: translateX(0);
+  }
+#musicplayer .topImg,#musicplayer .bottomImg{
+    background-image: url(./res/MM.png);
+}
+#chessgame .topImg,#chessgame .bottomImg{
+    background-image: url(./res/chess.png);
+}
+#contactsapp .topImg,#contactsapp .bottomImg{
+    background-image: url(./res/contacts.png);
 }
