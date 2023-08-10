@@ -3,7 +3,11 @@
     margin: 0;
     overflow-x: hidden;
 }
-
+a{
+    font-family: monospace;
+    text-decoration: none;
+    overflow: hidden;
+}
 body{
     background-color: black;
 }
@@ -35,6 +39,10 @@ body{
     }
     #Section4> div > a > img {
         width: 10vh;
+    }
+    .contactsbtn{
+        width: 10%;
+        font-size: 1.1vw;
     }
 }
 @media only screen and (max-width:600px) {
@@ -68,14 +76,55 @@ body{
     #Section4> div > a > img {
         width: 10vw;
     }
+    .contactsbtn{
+        width: 20%;
+        font-size: 4vw;
+    }
 }
 .navClass{
+    position: fixed;
+    z-index: 50;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color:rgb(24, 24, 24);
-    filter:opacity(0.9);
+}
+
+.contactsbtn{
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 30px;
+    margin: .3vw 2vw .3vw 2vw;
+    border-style: solid;
+    font-family: monospace;
+    background-color: #000000;
+    transition: all 0.5s;
+    border-color: #645cd1;
+}
+.contactsbtn > a{
+    color: white;
+}
+.contactsbtn:hover > a{
+    color: #645cd1;
+}
+.contactsbtn:hover{
+    border-color: white;
+}
+.contactsbtn:hover::after {
+    width: 100%;
+    height: 5px;
+}
+.contactsbtn::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: #645cd1;
+    bottom: 0;
+    width: 0%;
+    padding-left: 2vw;
+    height: 0px;
+    transition: all .5s;
 }
 #content{
     scroll-behavior: smooth;
@@ -91,11 +140,7 @@ body{
     text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #231557,
-    #44107a,
-    #44107a,
-    #00d9ff,
-    #00ff91
+    #645cd1,#9e88fe,#d5b8ff, #b4b9ff, #ffffff
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -309,7 +354,7 @@ body{
     transition: all 0.5s;
 }
 #Section4> div > a > img:hover{
-    filter: drop-shadow( 3px 3px 2px  #e3fbff);
+    filter: drop-shadow( 3px 3px 2px  #766fd3ff);
     transform: translateY(-1em);
 }
 
@@ -350,6 +395,7 @@ body{
     top:50;
     transition: all 0.5s;
     width: 100px;
+    filter: drop-shadow(5px 5px 5px black);
 }
 .card:hover > img{
     opacity: 0;
@@ -394,8 +440,8 @@ body{
 
 #Section5{
     width: 100vw;
-    display: flex;
     color: #fff;
+    display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-evenly;
@@ -405,6 +451,7 @@ body{
 }
 
 .newcard {
+    color: white;
     border: .05rem solid black;
     overflow: hidden;
     border-radius: 8px;
@@ -501,3 +548,118 @@ body{
 #contactsapp .topImg,#contactsapp .bottomImg{
     background-image: url(./res/contacts.png);
 }
+#Section6{
+    margin-top: 1.5vw;
+    background-color: #000000;
+    color: white;
+    width: 100vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-around;
+    overflow: hidden;
+}
+#Section6 > p{
+    overflow: hidden;
+    white-space: nowrap;
+    color: black;
+    font-size: large;
+    font-family: monospace;
+    background-color: #fff800;
+    transition: all 2s;
+}
+#Section6 > h1{
+    position: absolute;
+    font-size: 10vw;
+    opacity: 50%;
+    z-index: 0;
+    font-family: monospace;
+    color: #B2B2B2;
+    transition: all 1s;
+}
+
+.marqueetop{
+    transform: rotateZ(10deg);
+}
+
+.marqueemid{
+    transform: rotateZ(-10deg);
+}
+.marqueebot{
+    transform: rotateZ(5deg);
+}
+@keyframes marquanim {
+    0%{
+        transform: translateX(0%);
+    }25%{
+        transform: translateX(-15%);
+    }50%{
+        transform: translateX(0%);
+    }75%{
+        transform: translateX(15%);
+    }100%{
+        transform: translateX(0%);
+    }
+}
+
+.newbtn {
+    font-size: 3vw;
+    padding: 10px 35px;
+    background-color: #EBF5EE;
+    font-weight: bolder;
+    border: 3px solid transparent;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all .2s ease-in-out .1s;
+    z-index: 2;
+    filter: drop-shadow(5px 5px 5px #645cd1);
+}
+.newbtn > a {
+    color: #645cd1;
+}
+.newbtn:hover > a {
+    color: #ffffff;
+}
+  .newbtn:hover {
+    border-color: white;
+    background-color: #9992ff;
+    transform: scale(1.2) rotate(5deg);
+  }
+  
+  .newbtn:before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 180%;
+    top: -30%;
+    left: -40%;
+    transform: rotateZ(20deg);
+    width: 40px;
+    transition: left .2s ease-in-out, left 0s;
+  }
+  
+.newbtn:after {
+    content: '';
+    position: absolute;
+    background-color: #766fd3ff;
+    height: 180%;
+    top: -30%;
+    left: -40%;
+    transform: translateX(-40px) rotateZ(20deg);
+    width: 40px;
+    transition: left .2s ease-in-out left 0s;
+  }
+  
+  .newbtn:hover:after {
+    left: 150%;
+    transition: left .3s ease-in-out;
+  }
+  
+  .newbtn:hover:before {
+    left: 150%;
+    transition: left .3s ease-in-out;
+  }
