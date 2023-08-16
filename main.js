@@ -15,6 +15,7 @@ const observerAtSection2 = new IntersectionObserver((entries)=>{
         }
     });
 });
+
 const observerAtInfo = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
         if (entry.isIntersecting){
@@ -24,6 +25,7 @@ const observerAtInfo = new IntersectionObserver((entries)=>{
         }
     });
 });
+
 const observerAtSection5 = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
         if (entry.isIntersecting){
@@ -37,6 +39,7 @@ const observerAtSection5 = new IntersectionObserver((entries)=>{
         }
     });
 });
+
 let sections = document.querySelectorAll(".commonInSection");
 sections.forEach((el)=>observerAtSection2.observe(el));
 
@@ -50,13 +53,14 @@ function openupfor(){
     let nth_list = document.getElementById("Section6").children
     nth_list[0].style = "opacity : 0%"
     nth_list[1].style = "transform: translateX(100%);"
-     nth_list[2].style = "transform: translateX(0%)"
-      nth_list[4].style = "transform: translateX(0%);"
+    nth_list[2].style = "transform: translateX(0%)"
+    nth_list[4].style = "transform: translateX(0%);"
 }
+
 function backhowitwas(){
     let nth_list = document.getElementById("Section6").children
     nth_list[0].style = "opacity : 50%"
     nth_list[1].style = "transform: rotateZ(10deg);"
-     nth_list[2].style = "transform: rotateZ(-10deg);"
-      nth_list[4].style = "transform: rotateZ(5deg);"
+    nth_list[2].style = "transform: rotateZ(-10deg);"
+    nth_list[4].style = "transform: rotateZ(5deg);"
 }
