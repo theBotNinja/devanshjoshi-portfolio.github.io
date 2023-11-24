@@ -421,6 +421,15 @@ body{
     opacity: 0;
     transition: all 0.5s;
 }
+.card > div{
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.card:hover > div{
+    filter: blur(0px);
+    opacity: 100;
+}
 .card:hover>h2{
     opacity: 100;
     filter: blur(0);
