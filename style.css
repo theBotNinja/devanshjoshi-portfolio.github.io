@@ -389,10 +389,6 @@ body{
     width: 100px;
     filter: drop-shadow(5px 5px 5px black);
 }
-.card:hover > img{
-    opacity: 0;
-    transform: translateY(-100px);
-}
 .card:hover{
     border: 1px solid whitesmoke;
     background-image: url(res/anime-fon-8767.jpeg);
@@ -410,17 +406,6 @@ body{
     padding: 7px;
     transition: all 0.5s;
 }
-.card>p{
-    padding: 7px;
-    opacity: 0;
-    color: white;
-    font-size: large;
-    font-family: monospace;
-    font-weight: lighter;
-    filter: blur(5px);
-    opacity: 0;
-    transition: all 0.5s;
-}
 .card > div{
     filter: blur(5px);
     opacity: 0;
@@ -431,10 +416,6 @@ body{
     opacity: 100;
 }
 .card:hover>h2{
-    opacity: 100;
-    filter: blur(0);
-}
-.card:hover>p{
     opacity: 100;
     filter: blur(0);
 }
